@@ -13,7 +13,6 @@ If you find this project helpful in your research, welcome to cite the paper.
 @article{cohen2022semantic,
     title={Semantic Segmentation in Art Paintings},
     author={Nadav Cohen and Yael Newman and Ariel Shamir},
-    eprint={2203.03238},
     journal={arXiv:2203.03238},
     year={2022}
 }
