@@ -16,3 +16,10 @@ If you find this project helpful in your research, welcome to cite the paper.
     year={2022}
 }
 ```
+
+## Updates
+
+***04/09/2022***
+
+`News`: Uploaded train and test scripts, and everything needed to run them.
+`Next Update`: Link to DRAM dataset, trained checkpoints and scripts for PascalVOC2012+SBD preprocessing.
