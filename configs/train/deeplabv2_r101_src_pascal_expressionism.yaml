@@ -1,0 +1,13 @@
+MODEL:
+  NAME: "deeplab_resnet101"
+  WEIGHTS: 'https://download.pytorch.org/models/resnet101-5d3b4d8f.pth'
+  FREEZE_BN: True
+  NUM_CLASSES: 12
+DATASETS:
+  SOURCE_TRAIN: "pascal_sbd12_prestyled_expressionism_train"
+  TEST: "dram_expressionism_test"
+SOLVER:
+  BASE_LR: 2.5e-4
+  MAX_ITER: 31250
+  STOP_ITER: 20000
+  BATCH_SIZE: 4

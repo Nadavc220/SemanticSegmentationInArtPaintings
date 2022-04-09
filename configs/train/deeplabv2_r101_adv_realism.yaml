@@ -1,0 +1,20 @@
+MODEL:
+  NAME: "deeplab_resnet101"
+  WEIGHTS: "https://download.pytorch.org/models/resnet101-5d3b4d8f.pth"
+  FREEZE_BN: True
+  NUM_CLASSES: 12
+DATASETS:
+  SOURCE_TRAIN: "pascal_sbd12_train"
+  TARGET_TRAIN: "dram_realism_train"
+  TEST: "dram_realism_test"
+INPUT:
+  BRIGHTNESS: 0.5
+  CONTRAST: 0.5
+  SATURATION: 0.5
+  HUE: 0.2
+SOLVER:
+  BASE_LR: 2.5e-4
+  BASE_LR_D: 0.0001
+  MAX_ITER: 62500
+  STOP_ITER: 40000
+  BATCH_SIZE: 4

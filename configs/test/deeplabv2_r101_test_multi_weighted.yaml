@@ -1,0 +1,17 @@
+MODEL:
+  NAME: "deeplab_resnet101"
+  WEIGHTS: "https://download.pytorch.org/models/resnet101-5d3b4d8f.pth"
+  MULTI_TEST_WEIGHTS: ['../FADA/vip_results/step2_styled_source/adv_pascal_sbd12_filtered_realism_lr2.5e4_source_prestyled/model_iter040000.pth',
+                '../FADA/vip_results/step2_styled_source/adv_pascal_sbd12_filtered_impressionism_lr2.5e4_source_prestyled/model_iter040000.pth',
+                '../FADA/vip_results/step2_styled_source/adv_pascal_sbd12_filtered_post_impressionism_lr2.5e4_source_prestyled/model_iter040000.pth',
+                '../FADA/vip_results/step2_styled_source/adv_pascal_sbd12_filtered_expressionism_lr2.5e4_source_prestyled/model_iter040000.pth']
+
+  NUM_CLASSES: 12
+DATASETS:
+  TEST: 'dram_impressionism_test'
+  MULTI_TEST_WEIGHTS_DATASETS: ["dram_realism_train",
+                                "dram_impressionism_train",
+                                "dram_post_impressionism_train",
+                                "dram_expressionism_train"]
+
+  WEIGHT_VEC_DICT_PATH: "../dram_analyze/knn/outputs/weights_knn512_0"
