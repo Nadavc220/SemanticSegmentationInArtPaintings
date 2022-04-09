@@ -5,9 +5,20 @@ This is the official implementation of the paper **Semantic Segmentation in Art 
 
 We are organizing our code so it is understandable and easy to use. Until then we invite you to read our paper.
 
-# Citation
-If you find this project helpful in your research, welcome to cite the paper.
 
+## Updates
+
+***04/09/2022***
+
+`News`: Uploaded train and test scripts, and everything needed to run them.
+`Next Update`: Link to DRAM dataset, trained checkpoints and scripts for PascalVOC2012+SBD preprocessing.
+
+
+### Acknowledge
+Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Permuted AdaIN](https://github.com/onuriel/PermutedAdaIN). We thank them for their excellent research and for sharing their repositories.
+
+# Citation
+If you found this project helpful in your research, please consider citing our paper.
 ```
 @article{cohen2022semantic,
     title={Semantic Segmentation in Art Paintings},
@@ -16,10 +27,3 @@ If you find this project helpful in your research, welcome to cite the paper.
     year={2022}
 }
 ```
-
-## Updates
-
-***04/09/2022***
-
-`News`: Uploaded train and test scripts, and everything needed to run them.
-`Next Update`: Link to DRAM dataset, trained checkpoints and scripts for PascalVOC2012+SBD preprocessing.
