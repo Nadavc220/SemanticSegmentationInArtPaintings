@@ -1,5 +1,6 @@
 # Semantic Segmentation in Art Paintings
-![Autoencoder](./figs/paper_teaser.png)
+![teaser](figures/paper_teaser.png)
+
 This is the official implementation of the paper **Semantic Segmentation in Art Paintings**. EuroGraphics 2022. Nadav Cohen, Yael Newman, Ariel Shamir
 [\[Arxiv\]](https://arxiv.org/abs/2203.03238)
 
