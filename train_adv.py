@@ -292,7 +292,7 @@ def run_test(cfg, feature_extractor, classifier, local_rank, distributed):
     classifier.eval()
     end = time.time()
     with torch.no_grad():
-        for i, (x, y, _, _) in enumerate(test_loader):
+        for i, (x, y, _) in enumerate(test_loader):
             x = x.cuda(non_blocking=True)
             y = y.cuda(non_blocking=True).long()
             
