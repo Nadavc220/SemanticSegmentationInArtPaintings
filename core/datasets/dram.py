@@ -98,8 +98,6 @@ class DramDataSet(data.Dataset):
             label_copy = self.ignore_label * np.ones(label.shape, dtype=np.float32)
             for k, v in self.id_to_trainid.items():
                 label_copy[label == k] = v
-            # for k in self.trainid2name.keys():
-            #     label_copy[label == k] = k
             label = Image.fromarray(label_copy)
         else:
             label = image.copy()  # decoy for later use
@@ -108,6 +106,6 @@ class DramDataSet(data.Dataset):
             image, label = self.transform(image, label)
 
         if self.split != 'train':
-            return image, label, name, datafiles["img"]
+            return image, label, name
         else:
             return image, size, name
