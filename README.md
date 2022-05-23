@@ -21,11 +21,13 @@ Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Pe
 # Citation
 If you found this project helpful in your research, please consider citing our paper.
 ```
-@article{ArtSeg-22,
-    author  = {Nadav Cohen and Yael Newman and Ariel Shamir},
-    title   = {Semantic Segmentation in Art Paintings},
-    journal = {Computer Graphics Forum (Proc. Eurographics)},
-    year    = {2022},
-    pages = {accepted},
+@article {ArtSeg-22,
+    journal = {Computer Graphics Forum},
+    title = {{Semantic Segmentation in Art Paintings}},
+    author = {Cohen, Nadav and Newman, Yael and Shamir, Ariel},
+    year = {2022},
+    publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+    ISSN = {1467-8659},
+    DOI = {10.1111/cgf.14473}
 }
 ```
