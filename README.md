@@ -30,7 +30,7 @@ as gathered from original sources without any process.
 ### Checkpoints
 You can find our trained checkpoints in the following link: [\[checkpoints.zip\]](https://faculty.runi.ac.il/arik/site/artseg/checkpoints.zip)  
 The .zip file holds checkpoints for Step1 and Step2 for each of the art movements used for training: Realism, Impressionism, Post-Impressionism and Expressionism.  
-To Compose the networks as described in the paper unzip the checkpoints.zip file to the project folder and then run ./test_multi_weighted.py together with the style weights file (found in the style weights folder).  
+To compose the networks as described in the paper unzip the checkpoints.zip file to the project folder and then run ./test_multi_weighted.py together with the style weights file (found in the style weights folder).  
 The multi-test config should already be set to use the checkpoints and style weights.
 
 ### Acknowledge
