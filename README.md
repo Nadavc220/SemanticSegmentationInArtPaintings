@@ -9,6 +9,12 @@ We are organizing our code so it is understandable and easy to use. Until then w
 
 ## Updates
 
+***06/05/2022***
+
+`News`: DRAM dataset is now available in our project page (seem more info below). Also available are our trained checkpoints, style weights file for DRAM test set
+and scripts for combining PascalVOC12 and SBD datasets and filtering the combined dataset to include the 12 classes used in the paper.
+`Next Update`: Final scripts for stylizing the dataset with a specific art style and clear instructions for train and test scripts (requirements.txt file, and command line calls). Hopfully next update will be the final one (besides bug fixes if needed).
+
 ***04/09/2022***
 
 `News`: Uploaded train and test scripts, and everything needed to run them.
