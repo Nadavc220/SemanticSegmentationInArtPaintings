@@ -14,6 +14,17 @@ We are organizing our code so it is understandable and easy to use. Until then w
 `News`: Uploaded train and test scripts, and everything needed to run them.
 `Next Update`: Link to DRAM dataset, trained checkpoints and scripts for PascalVOC2012+SBD preprocessing.
 
+### Project Page + Dataset Download
+Our project page is officialy up: [\[Project Page\]](https://faculty.runi.ac.il/arik/site/artseg/)
+Here you can find the download links for DRAM dataset and some more info about the paper.
+`Note`: The website offers two options: RAW and Processed. The processed version is the dataset in the state we used it before training. RAW holds the dataset
+as gathered from original sources without any process.
+
+### Checkpoints
+You can find our trained checkpoints in the following link: [\[checkpoints.zip\]](https://faculty.runi.ac.il/arik/site/artseg/checkpoints.zip)
+The .zip file holds checkpoints for Step1 and Step2 for each of the art movements used for training: Realism, Impressionism, Post-Impressionism and Expressionism.
+To Compose the networks as described in the paper unzip the checkpoints.zip file to the project folder and then run ./test_multi_weighted.py together with the style weights file (found in the style weights folder).
+The multi-test config should already be set to use the checkpoints and style weights.
 
 ### Acknowledge
 Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Permuted AdaIN](https://github.com/onuriel/PermutedAdaIN). We thank them for their excellent research and for sharing their repositories.
