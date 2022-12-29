@@ -47,6 +47,7 @@ The multi-test config should already be set to use the checkpoints and style wei
 
 ### Data Preparation
 `Note`: If you are only interested in testing the code, you can skip training pytorch-AdaIN and creating pseudo paintings as you need only the DRAM dataset.
+
 After running the all instructions, your folder tree should look like this:
 ```bash
 ├── data
