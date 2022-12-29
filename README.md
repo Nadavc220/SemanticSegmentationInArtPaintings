@@ -152,7 +152,7 @@ python test_multi_weighted.py -cfg /home/students/nadav/FADA_ArtSeg/configs/test
 
 
 ### Acknowledge
-Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Permuted AdaIN](https://github.com/onuriel/PermutedAdaIN). We thank them for their excellent research and for sharing their repositories.
+Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Permuted AdaIN](https://github.com/onuriel/PermutedAdaIN). We thank them for their excellent research and for sharing their repositories. We also thank [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN) and [stylize-datasets](https://github.com/bethgelab/stylize-datasets) for their excellent repositories which are used in our data creation process.
 
 # Citation
 If you found this project helpful in your research, please consider citing our paper.
