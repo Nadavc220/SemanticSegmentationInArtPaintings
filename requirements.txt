@@ -13,6 +13,7 @@ opencv-python==4.4.0.40
 packaging==22.0
 Pillow==9.3.0
 pip==22.3.1
+protobuf==3.20.1
 pyparsing==3.0.9
 python-dateutil==2.8.2
 PyWavelets==1.4.1
@@ -21,6 +22,7 @@ scikit-image==0.17.2
 scipy==1.9.3
 setuptools==47.1.0
 six==1.16.0
+tensorboardX==2.5.1
 tifffile==2022.10.10
 torch==1.5.1
 torchvision==0.6.1
