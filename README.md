@@ -33,6 +33,33 @@ The .zip file holds checkpoints for Step1 and Step2 for each of the art movement
 To compose the networks as described in the paper unzip the checkpoints.zip file to the project folder and then run ./test_multi_weighted.py together with the style weights file (found in the style weights folder).  
 The multi-test config should already be set to use the checkpoints and style weights.
 
+## Usage
+### Env Installation
+1) Install Python 3.8.5
+2) Create a pip virtual env using python -m venv <path_to_env>
+3) run 'pip install -r requirements.txt' from the project folder.
+4) activate pip env: 'source <path_to_env>/bin/activate.
+
+### Data Preparation
+├── data
+│   ├── pascal
+│   ├── sbd
+│   └── DRAM_500
+└── ProjectDir
+
+1) Create data dir as described above (located in the same folder as your ProjectDir)
+2) Download PascalVoc12 dataset [link](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) and unzip it in data/pascal.
+3) Download SBD dataset [link](http://home.bharathh.info/pubs/codes/SBD/download.html) and unzip it in data/sbd.
+4) combine and filter pascal and sbd to one dataset with 12 classes as used in the paper:
+```
+# combine
+python utils/combine_pascal_sbd.py
+# filter
+python utils/create_filtered_list.py 
+```
+5) Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
+
+
 ### Acknowledge
 Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Permuted AdaIN](https://github.com/onuriel/PermutedAdaIN). We thank them for their excellent research and for sharing their repositories.
 
