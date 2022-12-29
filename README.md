@@ -74,10 +74,7 @@ After running the all instructions, your folder tree should look like this:
 
     ```
     from main project dir:
-    
-    # combine
     python utils/combine_pascal_sbd.py
-    # filter
     python utils/create_filtered_list.py 
     ```
     
@@ -119,7 +116,6 @@ After running the all instructions, your folder tree should look like this:
 
     ```
     from stylize-datasets:
-    
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_realism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_realism
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_impressionism
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_post_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_post_impressionism
