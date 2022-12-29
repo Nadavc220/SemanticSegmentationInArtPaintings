@@ -3,7 +3,7 @@ from PIL import Image
 import scipy.io
 import numpy as np
 
-dataset_path = '../data/filtered_pascal'
+dataset_path = '../data/pascal_sbd'
 images_path = os.path.join(dataset_path, 'images/')
 labels_path = os.path.join(dataset_path, 'labels/')
 splits = ['train', 'val']

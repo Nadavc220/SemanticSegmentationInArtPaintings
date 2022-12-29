@@ -6,7 +6,7 @@ pascal_path = '../data/pascal/VOCdevkit/VOC2012'
 # path to benchmark_RELEASE/dataset
 sbd_path = '../data/sbd/benchmark_RELEASE/dataset'
 
-output_dir = '../data/new_pascal'
+output_dir = '../data/pascal_sbd'
 os.makedirs(output_dir, exist_ok=True)
 
 # handle pascal lists
