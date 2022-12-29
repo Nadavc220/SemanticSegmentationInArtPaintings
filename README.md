@@ -51,32 +51,38 @@ The multi-test config should already be set to use the checkpoints and style wei
 ```
 
 - Download Data
-    1) Create data dir as described above (located in the same folder as your ProjectDir)
-    2) Download PascalVoc12 dataset [link](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) and unzip it in data/pascal.
-    3) Download SBD dataset [link](http://home.bharathh.info/pubs/codes/SBD/download.html) and unzip it in data/sbd.
-    4) combine and filter pascal and sbd to one dataset with 12 classes as used in the paper:
+    - Create data dir as described above (located in the same folder as your ProjectDir)
+    - Download PascalVoc12 dataset [link](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) and unzip it in data/pascal.
+    - Download SBD dataset [link](http://home.bharathh.info/pubs/codes/SBD/download.html) and unzip it in data/sbd.
+    - combine and filter pascal and sbd to one dataset with 12 classes as used in the paper:
+
     ```
     # combine
     python utils/combine_pascal_sbd.py
     # filter
     python utils/create_filtered_list.py 
     ```
+    
     5) Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
 
 - Create Pseudo Paintings
     - Train AdaIN style transfer networks:   
-        1) clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
-        2) create art movement data folders compatible with repo interface:
+        - clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
+        - create art movement data folders compatible with repo interface:
+        
         ```
         python utils/organize_dram_for_adain_train.py
         ```
+        
         This will create four folders in your data dir: DRAM_for_Adain_<art_movement> which. These folders hold all of the movements images in a single folder.
         Feel free to remove them after the next step.
-        3) Train AdaIN weights using the following call:
+        
+        - Train AdaIN weights using the following call:
         ```
         ```
+        
     -   Create a stylzed psuedo-paintings dataset for each movement.
-        3) clone and install [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
+        - clone and install [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
 
 
 ### Acknowledge
