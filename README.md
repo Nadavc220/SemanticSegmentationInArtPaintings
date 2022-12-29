@@ -103,13 +103,19 @@ After running the all instructions, your folder tree should look like this:
     - for each created folder, run stylize-datasets/stylize.py script from its project page to create pseudo painting dataset as follows:
 
     ```
-    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_realism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_realism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_realism
     
-    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_impressionism
     
-    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_post_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_post_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_post_impressionism
     
-    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_expressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_expressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_expressionism
+    ```
+    
+    - run the following script from the main project dir to organize the pseudo painting folders for the Semantic Segmentation in Art Paintings training:
+    
+    ```
+    python utils/organize_pseudo_painting_dirs.py
     ```
 
 
