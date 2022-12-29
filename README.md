@@ -41,11 +41,14 @@ The multi-test config should already be set to use the checkpoints and style wei
 4) activate pip env: 'source <path_to_env>/bin/activate.
 
 ### Data Preparation
+After running the all instructions, your folder tree should look like this:
 ```bash
 ├── data
 │   ├── pascal
 │   ├── sbd
+    ├── DRAM_for_Adain
 │   └── DRAM_500
+
 ├── ProjectDir
 └── stylize-datasets
 ```
@@ -63,25 +66,26 @@ The multi-test config should already be set to use the checkpoints and style wei
     python utils/create_filtered_list.py 
     ```
     
-    5) Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
+    - Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
 
-- Create Pseudo Paintings
-    - Train AdaIN style transfer networks:   
-        - clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
-        - create art movement data folders compatible with repo interface:
+- Train AdaIN style transfer networks:   
+    - clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
+    - create art movement data folders compatible with repo interface:
         
-        ```
-        python utils/organize_dram_for_adain_train.py
-        ```
+    ```
+    python utils/organize_dram_for_adain_train.py
+    ```
+
+    This will create four folders in your data dir: DRAM_for_Adain which. These folders hold all of the movements images in a single folder.
+    Feel free to remove them after the next step.
+
+    - Train AdaIN weights using the following call:
+
+    ```
+    CUDA_VISIBLE_DEVICES=<gpu_id> python train.py --content_dir <content_dir> --style_dir <style_dir>
+    ```
         
-        This will create four folders in your data dir: DRAM_for_Adain_<art_movement> which. These folders hold all of the movements images in a single folder.
-        Feel free to remove them after the next step.
-        
-        - Train AdaIN weights using the following call:
-        ```
-        ```
-        
-    -   Create a stylzed psuedo-paintings dataset for each movement.
+    - Create a Psuedo-Paintings dataset for each movement.
         - clone and install [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
 
 
