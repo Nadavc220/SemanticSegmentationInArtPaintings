@@ -44,15 +44,18 @@ The multi-test config should already be set to use the checkpoints and style wei
 After running the all instructions, your folder tree should look like this:
 ```bash
 ├── data
-│   ├── pascal
-│   ├── sbd
-│   ├── pascal_sbd
-│   ├── DRAM_for_Adain
-│   └── DRAM_500
+│   ├── pascal                                  ---> original pascal dataset
+│   ├── sbd                                     ---> original sbd dataset
+│   ├── pascal_sbd                              ---> pascal combined with sbd and filtered (same as paper)
+│   ├── pascal_sbd_styled_realism               ---> realism pseudo-paintings
+│   ├── pascal_sbd_styled_impressionism         ---> impressionism pseuso-paintings
+│   ├── pascal_sbd_styled_post_impressionism    ---> post-impressionism pseudo-paintings
+│   ├── pascal_sbd_styled_expressionism         ---> expressionism pseudo paintings
+│   └── DRAM_500                                ---> DRAM art paintings dataset
 │
-├── SemanticSegmentationInArtPaintings (ProjectDir)
-├── pytorch-AdaIN
-└── stylize-datasets
+├── SemanticSegmentationInArtPaintings          ---> project main directory
+├── pytorch-AdaIN                               ---> AdaIN style transfer network code
+└── stylize-datasets                            ---> dataset stylization repository for pseudo-paintings creation
 ```
 
 - Download Data
