@@ -64,7 +64,19 @@ The multi-test config should already be set to use the checkpoints and style wei
     5) Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
 
 - Create Pseudo Paintings
-    1) clone [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
+    - Train AdaIN style transfer networks:   
+        1) clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
+        2) create art movement data folders compatible with repo interface:
+        ```
+        python utils/organize_dram_for_adain_train.py
+        ```
+        This will create four folders in your data dir: DRAM_for_Adain_<art_movement> which. These folders hold all of the movements images in a single folder.
+        Feel free to remove them after the next step.
+        3) Train AdaIN weights using the following call:
+        ```
+        ```
+    -   Create a stylzed psuedo-paintings dataset for each movement.
+        3) clone and install [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
 
 
 ### Acknowledge
