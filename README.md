@@ -89,7 +89,7 @@ After running the all instructions, your folder tree should look like this:
     python utils/organize_dram_for_adain_train.py
     ```
 
-    This will create a folder in your data dir: DRAM_for_Adain. This folders hold all of the movements images in a single folder for traninig the AdaIN network.
+    This will create a folder in your data dir: DRAM_for_Adain. This folders hold all of the movements images in a single folder for training the AdaIN network.
     Feel free to remove 'DRAM_for_Adain' after the next step, as you will not need it further.
 
     - Train AdaIN weights using the following command from pytorch-AdaIN project dir:
