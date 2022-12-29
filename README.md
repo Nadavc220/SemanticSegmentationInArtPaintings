@@ -41,11 +41,13 @@ The multi-test config should already be set to use the checkpoints and style wei
 4) activate pip env: 'source <path_to_env>/bin/activate.
 
 ### Data Preparation
+```bash
 ├── data
 │   ├── pascal
 │   ├── sbd
 │   └── DRAM_500
 └── ProjectDir
+```
 
 1) Create data dir as described above (located in the same folder as your ProjectDir)
 2) Download PascalVoc12 dataset [link](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) and unzip it in data/pascal.
