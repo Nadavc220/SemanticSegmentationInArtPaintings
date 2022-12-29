@@ -71,12 +71,12 @@ After running the all instructions, your folder tree should look like this:
     - Download SBD dataset [link](http://home.bharathh.info/pubs/codes/SBD/download.html) and unzip it in data/sbd.
     - combine and filter pascal and sbd to one dataset with 12 classes as used in the paper:
 
-```
-# combine
-python utils/combine_pascal_sbd.py
-# filter
-python utils/create_filtered_list.py 
-```
+    ```
+    # combine
+    python utils/combine_pascal_sbd.py
+    # filter
+    python utils/create_filtered_list.py 
+    ```
     
     - Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
 
