@@ -73,6 +73,8 @@ After running the all instructions, your folder tree should look like this:
 
 
     ```
+    from main project dir:
+    
     # combine
     python utils/combine_pascal_sbd.py
     # filter
@@ -96,6 +98,7 @@ After running the all instructions, your folder tree should look like this:
     - Train AdaIN weights using the following command from pytorch-AdaIN project dir:
 
     ```
+    from pytorch-AdaIN:
     CUDA_VISIBLE_DEVICES=<gpu_id> python train.py --content_dir ../data/pascal_sbd/images --style_dir ../data/DRAM_for_Adain
     ```
         
@@ -105,6 +108,7 @@ After running the all instructions, your folder tree should look like this:
     - create a data folder for each art movement compatible with stylize_datasets interface:
     
     ```
+    from main project dir:
     python utils/organize_dram_for_stylization.py
     ```
     
@@ -114,18 +118,18 @@ After running the all instructions, your folder tree should look like this:
     - for each created folder, run stylize-datasets/stylize.py script from its project page to create pseudo painting dataset as follows:
 
     ```
+    from stylize-datasets:
+    
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_realism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_realism
-    
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_impressionism
-    
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_post_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_post_impressionism
-    
     python stylize.py --content-dir ../data/pascal_sbd/images --style-dir ../data/DRAM_for_stylization_expressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5 --output-dir ../data/pascal_sbd_styled_expressionism
     ```
     
     - run the following script from the main project dir to organize the pseudo painting folders for the Semantic Segmentation in Art Paintings training:
     
     ```
+    from main project dir:
     python utils/organize_pseudo_painting_dirs.py
     ```
 
