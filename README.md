@@ -10,6 +10,11 @@ We are organizing our code so it is understandable and easy to use. Until then w
 
 ## Updates
 
+***12/29/2022***
+
+`News`: requirements.txt file, detailed descriptions on how to download the relevant data, train AdaIN style transfer and use it for creating pseudo paintings. More descriptions of how to train and test the models from scratch.
+`Next Update`: inference code for paintings out of the DRAM dataset.
+
 ***06/05/2022***
 
 `News`: DRAM dataset is now available in our project page (seem more info below). Also available are our trained checkpoints, style weights file for DRAM test set
@@ -41,6 +46,7 @@ The multi-test config should already be set to use the checkpoints and style wei
 4) activate pip env: 'source <path_to_env>/bin/activate.
 
 ### Data Preparation
+If you are only interested in testing the code, you can skip training pytorch-AdaIN and creating pseudo paintings as you need only the DRAM dataset.
 After running the all instructions, your folder tree should look like this:
 ```bash
 ├── data
@@ -100,7 +106,7 @@ After running the all instructions, your folder tree should look like this:
     python utils/organize_dram_for_stylization.py
     ```
     
-    This will create a folder for each art movement in your data dir: DRAM_for_stylization_<movement> same as we did before for training AdaIN
+    This will create a folder for each art movement in your data dir: DRAM_for_stylization_movement same as we did before for training AdaIN
     Feel free to remove these folders after the next step, as you will not them further.
     
     - for each created folder, run stylize-datasets/stylize.py script from its project page to create pseudo painting dataset as follows:
@@ -120,6 +126,29 @@ After running the all instructions, your folder tree should look like this:
     ```
     python utils/organize_pseudo_painting_dirs.py
     ```
+
+### Train
+After creating all the data above you can train the networks yourself. Each networks trains with two steps, training the expressionism art movement for example will be as follows:
+
+```
+python train_src.py -cfg configs/train/deeplabv2_r101_src_pascal_expressionism.yaml OUTPUT_DIR results/step1/pseudo_expressionism  # Step 1
+python train_adv.py -cfg configs/train/deeplabv2_r101_adv_expressionism.yaml OUTPUT_DIR results/step2/expressionism resume results/step1/pseudo_expressionism/model_iter020000.pth  # Step 2
+```
+You can see all training command in train.sh.
+
+
+### Test
+you can test a single network or combine the networks based on the GRAM matrices of the test images (As described in paper).
+The test config files which are found in configs/test should be set according to the test you want to run.
+
+```
+Single Network Test:
+python test_single.py -cfg configs/test/deeplabv2_r101_test_single.yaml
+
+Multi-Network Test:
+python test_multi_weighted.py -cfg /home/students/nadav/FADA_ArtSeg/configs/test/deeplabv2_r101_test_multi_weighted.yaml
+
+```
 
 
 ### Acknowledge
