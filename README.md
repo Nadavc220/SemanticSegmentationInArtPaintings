@@ -46,10 +46,12 @@ After running the all instructions, your folder tree should look like this:
 ├── data
 │   ├── pascal
 │   ├── sbd
-    ├── DRAM_for_Adain
+│   ├── pascal_sbd
+│   ├── DRAM_for_Adain
 │   └── DRAM_500
-
-├── ProjectDir
+│
+├── SemanticSegmentationInArtPaintings (ProjectDir)
+├── pytorch-AdaIN
 └── stylize-datasets
 ```
 
@@ -70,23 +72,45 @@ After running the all instructions, your folder tree should look like this:
 
 - Train AdaIN style transfer networks:   
     - clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
-    - create art movement data folders compatible with repo interface:
+    - create combined DRAM data folder compatible with pytorch-AdaIN interface:
         
     ```
+    from main project dir:
     python utils/organize_dram_for_adain_train.py
     ```
 
-    This will create four folders in your data dir: DRAM_for_Adain which. These folders hold all of the movements images in a single folder.
-    Feel free to remove them after the next step.
+    This will create a folder in your data dir: DRAM_for_Adain. This folders hold all of the movements images in a single folder for traninig the AdaIN network.
+    Feel free to remove 'DRAM_for_Adain' after the next step, as you will not need it further.
 
-    - Train AdaIN weights using the following call:
+    - Train AdaIN weights using the following command from pytorch-AdaIN project dir:
 
     ```
-    CUDA_VISIBLE_DEVICES=<gpu_id> python train.py --content_dir <content_dir> --style_dir <style_dir>
+    CUDA_VISIBLE_DEVICES=<gpu_id> python train.py --content_dir ../data/pascal_sbd/images --style_dir ../data/DRAM_for_Adain
     ```
         
-    - Create a Psuedo-Paintings dataset for each movement.
-        - clone and install [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
+ - Create a Psuedo-Paintings dataset for each movement.
+    - clone and install [stylize-datasets](https://github.com/bethgelab/stylize-datasets)
+    - copy and rename the decoder '.pth' weight file from pytorch-Adain/experiments/decoder2_iter_160000.pth.tar -> stylize-datasets/models/decoder.pth
+    - create a data folder for each art movement compatible with stylize_datasets interface:
+    
+    ```
+    python utils/organize_dram_for_stylization.py
+    ```
+    
+    This will create a folder for each art movement in your data dir: DRAM_for_stylization_<movement> same as we did before for training AdaIN
+    Feel free to remove these folders after the next step, as you will not them further.
+    
+    - for each created folder, run stylize-datasets/stylize.py script from its project page to create pseudo painting dataset as follows:
+
+    ```
+    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_realism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    
+    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    
+    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_post_impressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    
+    python stylize.py --content-dir ../data/pascal_sbd_new/images --style-dir ../data/DRAM_for_stylization_expressionism --num-styles 1 --content-size 0 --style-size 0 --alpha 0.5
+    ```
 
 
 ### Acknowledge
