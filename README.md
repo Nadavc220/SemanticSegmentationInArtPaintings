@@ -71,6 +71,7 @@ After running the all instructions, your folder tree should look like this:
     - Download SBD dataset [link](http://home.bharathh.info/pubs/codes/SBD/download.html) and unzip it in data/sbd.
     - combine and filter pascal and sbd to one dataset with 12 classes as used in the paper:
 
+
     ```
     # combine
     python utils/combine_pascal_sbd.py
