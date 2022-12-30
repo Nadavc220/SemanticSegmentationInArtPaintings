@@ -109,7 +109,8 @@ After running the all instructions, your folder tree should look like this:
     python utils/organize_dram_for_stylization.py
     ```
     
-    This will create a folder for each art movement in your data dir: DRAM_for_stylization_movement same as we did before for training AdaIN
+    This will create a folder for each art movement in your data dir: DRAM_for_stylization_movement same as we did before for training AdaIN.
+    
     This time DO NOT remove the folders.
     
     - for each created folder, run stylize-datasets/stylize.py script from its project page to create pseudo painting dataset as follows:
