@@ -9,7 +9,7 @@ Nadav Cohen, Yael Newman, Ariel Shamir.
 ## Updates
 ***02/17/2023***
 
-`News`: Inference code and commands are up. Additionally, as it seems the project website tends to malfunction I updated the repository with links to the weights from google-drive.
+`News`: Inference code and commands are up. Additionally, as it seems the project website tends to malfunction I updated the repository with links to the checkpoints and dataset from google-drive.
 `Next Update`: The inference code was the last missing part of the project and as a result this was the last update. I will be maintaining the project in case issues come around.
 
 ***12/29/2022***
