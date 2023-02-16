@@ -6,12 +6,13 @@ MODEL:
                        './checkpoints/step2/adv_pascal_sbd12_filtered_post_impressionism_lr2.5e4_source_prestyled/model_iter040000.pth',
                        './checkpoints/step2/adv_pascal_sbd12_filtered_expressionism_lr2.5e4_source_prestyled/model_iter040000.pth']
 
-  NUM_CLASSES: 12
+  PCA: './gram_embedding/pca_f'
+
 DATASETS:
-  TEST: 'dram_with_unseen_test'
   MULTI_TEST_WEIGHTS_DATASETS: ["dram_realism_train",
                                 "dram_impressionism_train",
                                 "dram_post_impressionism_train",
                                 "dram_expressionism_train"]
 
-  WEIGHT_VEC_DICT_PATH: "./style_weights/weights_knn512_0"
+  TRAIN_GRAM_EMBEDDINGS: './gram_embedding/trainset_embeddings512'
+

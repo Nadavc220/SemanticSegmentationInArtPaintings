@@ -7,4 +7,4 @@ MODEL:
 DATASETS:
   TEST: 'dram_realism_test'
 
-resume: '../FADA/vip_results/step2_styled_source/adv_pascal_sbd12_filtered_realism_lr2.5e4_source_prestyled/model_iter040000.pth'
+resume: 'results/step1/pseudo_realism/model_iter020000.pth'
