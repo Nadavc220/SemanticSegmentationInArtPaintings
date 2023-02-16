@@ -38,6 +38,11 @@ The .zip file holds checkpoints for Step1 and Step2 for each of the art movement
 To compose the networks as described in the paper unzip the checkpoints.zip file to the project folder and then run ./test_multi_weighted.py together with the style weights file (found in the style weights folder).  
 The multi-test config should already be set to use the checkpoints and style weights.
 
+## DRAM Dataset Links
+Due to some technical issues with the project website the links to DRAM dataset can be found here:
+1) DRAM Processed: [\[link\]](https://drive.google.com/file/d/1TQN9yuN_nnNqKcn1F040SXGN2SG1n2EJ/view?usp=share_link)
+2) DRAM Raw: [\[link\]](https://drive.google.com/file/d/1IQ_1mbswk4f5prtW5vaFhY_phMvxwAXf/view?usp=share_link)
+
 ## Usage
 ### Env Installation
 1) Install Python 3.8.5
