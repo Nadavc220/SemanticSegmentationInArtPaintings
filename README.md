@@ -5,8 +5,6 @@ Nadav Cohen, Yael Newman, Ariel Shamir.
 
 ![teaser](figures/paper_teaser.png)
 
-We are organizing our code so it is understandable and easy to use. Until then we invite you to read our paper.
-
 
 ## Updates
 ***02/17/2023***
