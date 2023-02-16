@@ -158,6 +158,26 @@ python test_multi_weighted.py -cfg /home/students/nadav/FADA_ArtSeg/configs/test
 
 ```
 
+### Infer New Paintings
+To use the trained models to predict a segmentation mask to a painting img do the following steps:
+
+# Preparations
+1) Download the model checkpoints (As described above).
+2) Download the DRAM_processed dataset (As described above).
+3) Download the weight of VGG net ([from here](https://drive.google.com/file/d/1OxXG18BtSvmN-dnau7C7Fvrq-IXgx8mQ/view?usp=share_link)) and place it in './gram_embedding/weights folder'
+4) Run the following script to create GRAM embeddings for the DRAM training set and a PCA function:
+
+```
+python gram_embedding/emmbed_train_set.py
+```
+# Inference
+After the following steps you are ready to infer new paintings. To do so you should run the following:
+
+```
+python inference.py -cfg configs/infer/deeplabv2_r101_infer.yaml -input_path <img path or images dir> -output_path <path to save outputs>
+```
+The -input_path arg can receive a path to an image or a path to a directory contatining images (but no other files)
+
 
 ### Acknowledge
 Some of our code is adapted from [FADA](https://github.com/JDAI-CV/FADA) and [Permuted AdaIN](https://github.com/onuriel/PermutedAdaIN). We thank them for their excellent research and for sharing their repositories. We also thank [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN) and [stylize-datasets](https://github.com/bethgelab/stylize-datasets) for their excellent repositories which are used in our data creation process.
