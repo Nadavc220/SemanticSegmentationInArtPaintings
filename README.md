@@ -45,6 +45,9 @@ Due to some technical issues with the project website the links to DRAM dataset 
 1) DRAM Processed: [\[link\]](https://drive.google.com/file/d/1TQN9yuN_nnNqKcn1F040SXGN2SG1n2EJ/view?usp=share_link)
 2) DRAM Raw: [\[link\]](https://drive.google.com/file/d/1IQ_1mbswk4f5prtW5vaFhY_phMvxwAXf/view?usp=share_link)
 
+### Terms of Use
+This dataset is provided for research purposes only and without any warranty. Any commercial use is prohibited. If you use the dataset or parts of it in your research, you should cite our paper.
+
 ## Usage
 ### Env Installation
 1) Install Python 3.8.5
