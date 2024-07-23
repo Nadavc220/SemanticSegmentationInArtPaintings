@@ -58,7 +58,7 @@ This dataset is provided for research purposes only and without any warranty. An
 ### Data Preparation
 `Note`: If you are only interested in testing the code, you can skip training pytorch-AdaIN and creating pseudo paintings as you need only the DRAM dataset.
 
-After running the all instructions, your folder tree should look like this:
+After running all instructions, your folder tree should look like this:
 ```bash
 ├── data
 │   ├── pascal                                  ---> original pascal dataset
