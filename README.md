@@ -7,6 +7,10 @@ Nadav Cohen, Yael Newman, Ariel Shamir.
 
 
 ## Updates
+***02/06/2025***
+
+`News`: We have a new project page! We invite you to visit it: [\[Project Page\]]([https://faculty.runi.ac.il/arik/site/artseg/](https://nadavc220.github.io/ssiap/)).
+
 ***02/17/2023***
 
 `News`: Inference code and commands are up. Additionally, as it seems the project website tends to malfunction I updated the repository with links to the checkpoints and dataset from google-drive.
@@ -29,7 +33,7 @@ and scripts for combining PascalVOC12 and SBD datasets and filtering the combine
 `Next Update`: Link to DRAM dataset, trained checkpoints and scripts for PascalVOC2012+SBD preprocessing.
 
 ### Project Page + Dataset Download
-Our project page is officially up: [\[Project Page\]](https://faculty.runi.ac.il/arik/site/artseg/)  
+Our project page is officially up: [\[Project Page\]]([https://faculty.runi.ac.il/arik/site/artseg/](https://nadavc220.github.io/ssiap/))  
 Here you can find the download links for DRAM dataset and some more info about the paper.  
 `Note`: The website offers two options: RAW and Processed. The processed version is the dataset in the state we used it before training. RAW holds the dataset
 as gathered from original sources without any process.
@@ -88,7 +92,7 @@ After running all instructions, your folder tree should look like this:
     python utils/create_filtered_list.py 
     ```
     
-    - Download DRAM dataset [link](https://faculty.runi.ac.il/arik/site/artseg/Dram-Dataset.html) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
+    - Download DRAM dataset [link](https://nadavc220.github.io/ssiap/#dram-dataset) and unzip it to data. (Rename folder from DRAM_processed to DRAM_500, sorry about that...)
 
 - Train AdaIN style transfer networks:   
     - clone and install [pytorch-AdaIN](https://github.com/naoto0804/pytorch-AdaIN)
